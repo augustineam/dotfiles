@@ -1,4 +1,4 @@
-bspwmbar
+bdf-unifont
 chrome-remote-desktop
 google-chrome
 google-cloud-sdk
@@ -8,13 +8,15 @@ joplin-appimage
 miniconda3
 ms-office-online
 ngrok
-polybar
+openrazer-daemon
+openrazer-driver-dkms
+openrazer-meta
+polychromatic
 pth
+python-openrazer
 python37
 siji-git
-teams
 teamviewer
 visual-studio-code-bin
 vysor-bin
 yay
-zoom
