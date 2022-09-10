@@ -63,6 +63,9 @@ PS1="\[\e[01;31m\]\u@\h \[\e[01;34m\]\w \[\e[01;33m\]\`parse_git_branch\`\n\[\e[
 
 source "/opt/miniconda3/etc/profile.d/conda.sh" 
 
+export EDITOR=nvim
+export TERM=alacritty
+
 function go4sigaba() {
     export EMAIL="aavila@sigaba.io"
 }
