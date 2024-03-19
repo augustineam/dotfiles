@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-echo 'Copying dotfiles from ~/ to ./dotfiles'
+echo 'Copying dotfiles from ./dotfiles to ~/'
 
 pushd ./dotfiles
 
-find ./ -type f -exec cp -avf {} ~/{} \;
+find ./ -type f -exec cp -vf {} ~/{} \;
 
 popd
