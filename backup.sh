@@ -6,7 +6,8 @@ echo 'Copying dotfiles from ~/ to ./dotfiles'
 pushd ./dotfiles
 
 find ./ -type f -exec cp -vf ~/{} {} \;
-pacman -Qenq > pkgs/native
-pacman -Qemq > pkgs/foreign
 
 popd
+
+pacman -Qenq > pkgs/native
+pacman -Qemq > pkgs/foreign
