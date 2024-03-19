@@ -61,14 +61,9 @@ function parse_git_dirty {
 
 PS1="\[\e[01;31m\]\u@\h \[\e[01;34m\]\w \[\e[01;33m\]\`parse_git_branch\`\n\[\e[31m\]\`nonzero_return\`\[\e[00m\]$ "
 
-source "/opt/miniconda3/etc/profile.d/conda.sh" 
-
 export EDITOR=nvim
-export TERM=alacritty
-
-function go4sigaba() {
-    export EMAIL="aavila@sigaba.io"
-}
+export TERM=kitty
+export MAMBA_ROOT_PREFIX=$HOME/micromamba
 
 function go4kanan() {
     export EMAIL="agustin.avila@mekitec.com"
@@ -78,9 +73,11 @@ function go4aima() {
     export EMAIL="augusto.marin9115@gmail.com"
 }
 
-function purge_pakgs(){
+function purge_pakgs() {
     dpkg -l | grep '^rc' | awk '{print $2}' | xargs sudo apt-get purge -y
 }
+
+eval "$(micromamba shell hook --shell bash)"
 
 if command -v yarn &> /dev/null; then
     yarn_global_bin=$(yarn global bin)
