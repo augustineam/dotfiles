@@ -19,11 +19,11 @@ setxkbmap us -variant intl
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # init sxhkd and compton
-(pgrep -x sxhkd > /dev/null && pkill sxhkd) || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 picom &
 
-xss-lock -- i3lock -n -i /home/augus/Pictures/wallpapers/wall3.jpg &
+xss-lock -- /usr/bin/slimlock &
 
 bspc monitor DP-0 -d I II III IV V
 bspc monitor HDMI-0 -d VI VII VIII IX X
@@ -46,8 +46,3 @@ bspc rule -a Inkscape desktop='^9' state=floating follow=on rectangle=1600x1000+
 
 $HOME/.config/polybar/launch.sh &
 
-flameshot &
-sleep 5
-remmina -i &
-sleep 5
-nordpass %U
