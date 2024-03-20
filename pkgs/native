@@ -145,7 +145,6 @@ python-crcmod
 python-cryptography
 python-dnspython
 python-markdown
-qbittorrent
 qemu-desktop
 qemu-docs
 qopenvpn
@@ -162,6 +161,7 @@ remmina
 ristretto
 rofi
 rsync
+samba
 seahorse
 sed
 slim
