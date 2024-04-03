@@ -1,3 +1,4 @@
+asusctl
 drawio-desktop-bin
 gdrive
 google-chrome
@@ -5,13 +6,13 @@ google-cloud-cli
 insync
 jade-application-kit
 joplin-appimage
-libnvidia-container-tools
 micromamba-bin
 ngrok
 nordvpn-bin
-nvidia-container-toolkit
 onedrive
 python37
+rog-control-center
+supergfxctl
 virtio-win
 visual-studio-code-bin
 vysor-bin

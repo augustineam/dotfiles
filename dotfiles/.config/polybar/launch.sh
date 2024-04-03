@@ -12,7 +12,6 @@ fc-cache --force
 
 # Launch Polybar, using default config location ~/.config/polybar/config
 polybar first 2>&1 | tee -a /tmp/polybar.log & disown
-polybar second 2>&1 | tee -a /tmp/polybar.log & disown
 
 #for m in $(polybar --list-monitors | cut -d":" -f1);
 #do
