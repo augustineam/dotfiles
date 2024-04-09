@@ -32,6 +32,7 @@ docker
 docker-buildx
 docker-compose
 efibootmgr
+exfatprogs
 fakeroot
 feh
 file
@@ -107,6 +108,7 @@ npm
 npm-check-updates
 ntfs-3g
 nvidia
+nvidia-container-toolkit
 nvidia-settings
 nvtop
 obs-studio
@@ -148,6 +150,9 @@ qemu-desktop
 qemu-docs
 qopenvpn
 qt5-examples
+qt5-location
+qt5-webchannel
+qt5-webengine
 qt6-examples
 qt6-multimedia
 qt6-scxml
