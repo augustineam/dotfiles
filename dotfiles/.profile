@@ -64,6 +64,7 @@ PS1="\[\e[01;31m\]\u@\h \[\e[01;34m\]\w \[\e[01;33m\]\`parse_git_branch\`\n\[\e[
 export EDITOR=nvim
 export TERM=kitty
 export MAMBA_ROOT_PREFIX=$HOME/micromamba
+export MLFLOW_TRACKING_URI=/run/media/augus/dakkar/kssaiml/mlruns
 alias grep='grep --color=auto'
 
 function go4kanan() {

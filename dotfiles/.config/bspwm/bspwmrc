@@ -4,7 +4,7 @@
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 dbus-update-activation-environment --all
 
-xrandr --output DP-0 --primary --mode 3440x1440 --rate 144.00 --rotate normal --output HDMI-0 --mode 1920x1200 --rotate normal --left-of DP-0
+xrandr --output DP-0 --primary --mode 3440x1440 --rate 144 --rotate normal --output HDMI-0 --mode 1920x1200 --rate 75 --rotate normal --left-of DP-0
 
 WACOM='Wacom Intuos S Pen stylus'
 
@@ -38,6 +38,7 @@ bspc config gapless_monocle       true
 bspc rule -a 'Gimp-2.10' desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a vlc state=floating
+bspc rule -a file-roller state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a guvcview state=floating
 bspc rule -a NordPass state=floating
