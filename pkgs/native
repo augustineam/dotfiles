@@ -80,6 +80,7 @@ lsof
 lxappearance
 man-db
 mencoder
+mesa-utils
 meson
 mousepad
 mtools
@@ -94,6 +95,7 @@ npm-check-updates
 ntfs-3g
 nvidia
 nvidia-container-toolkit
+nvidia-prime
 nvidia-settings
 nvtop
 obs-studio
@@ -147,6 +149,7 @@ remmina
 ristretto
 rofi
 rsync
+rust
 samba
 seahorse
 slim
