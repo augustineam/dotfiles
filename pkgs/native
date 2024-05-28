@@ -79,6 +79,7 @@ linux-headers
 lsof
 lxappearance
 man-db
+mariadb
 mencoder
 mesa-utils
 meson
