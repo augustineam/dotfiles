@@ -10,7 +10,7 @@ WACOM='Wacom Intuos S Pen stylus'
 
 (xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" MapToOutput 1920x1200+0+0 #&& xsetwacom set "$WACOM" Rotate ccw
 
-feh --bg-fill ~/Pictures/wallpapers/cyberpunk.jpg
+feh --bg-fill ~/Pictures/wallpapers/futuristic.jpg
 
 # set keyboar layout to us int.
 setxkbmap us -variant intl
@@ -42,6 +42,7 @@ bspc rule -a file-roller state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a guvcview state=floating
 bspc rule -a NordPass state=floating
+bspc rule -a Galculator state=floating
 bspc rule -a Screenkey manage=off
 bspc rule -a Inkscape desktop='^9' state=floating follow=on rectangle=1600x1000+920+220
 

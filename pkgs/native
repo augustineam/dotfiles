@@ -6,7 +6,6 @@ atril
 autoconf
 automake
 avahi
-aws-cli
 base
 base-devel
 bash-completion
@@ -94,8 +93,10 @@ lxappearance
 m4
 make
 man-db
+mariadb
 mencoder
 meson
+metasploit
 mousepad
 mtools
 neovim
@@ -136,7 +137,9 @@ perl-json-parse
 perl-readonly
 picom
 pipewire
+pipewire-alsa
 pipewire-pulse
+pipewire-session-manager
 pkgconf
 polkit-gnome
 polybar
