@@ -65,6 +65,8 @@ export EDITOR=nvim
 export TERM=kitty
 export MAMBA_ROOT_PREFIX=$HOME/micromamba
 export MLFLOW_TRACKING_URI=/run/media/augus/dakkar/kssaiml/mlruns
+export HF_HOME=/run/media/augus/dakkar/huggingface
+
 alias grep='grep --color=auto'
 
 function go4kanan() {

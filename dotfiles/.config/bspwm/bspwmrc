@@ -10,7 +10,7 @@ WACOM='Wacom Intuos S Pen stylus'
 
 (xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" MapToOutput 1920x1200+0+0 #&& xsetwacom set "$WACOM" Rotate ccw
 
-feh --bg-fill ~/Pictures/wallpapers/futuristic.jpg
+feh --bg-fill ~/Pictures/wallpapers/cyberpunk.jpg
 
 # set keyboar layout to us int.
 setxkbmap us -variant intl
