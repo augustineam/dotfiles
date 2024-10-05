@@ -65,17 +65,8 @@ export EDITOR=nvim
 export TERM=kitty
 export MAMBA_ROOT_PREFIX=$HOME/micromamba
 export MLFLOW_TRACKING_URI=/run/media/augus/dakkar/kssaiml/mlruns
-export HF_HOME=/run/media/augus/dakkar/huggingface
 
 alias grep='grep --color=auto'
-
-function go4kanan() {
-    export EMAIL="agustin.avila@mekitec.com"
-}
-
-function go4aima() {
-    export EMAIL="augusto.marin9115@gmail.com"
-}
 
 function purge_pakgs() {
     dpkg -l | grep '^rc' | awk '{print $2}' | xargs sudo apt-get purge -y
