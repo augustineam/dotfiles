@@ -24,6 +24,7 @@ bspwm
 calc
 calibre
 cmake
+cuda
 cups
 dbus-broker-units
 dhcpcd
@@ -32,11 +33,11 @@ docker
 docker-buildx
 docker-compose
 efibootmgr
+engrampa
 exfatprogs
 fakeroot
 feh
 file
-file-roller
 findutils
 flameshot
 flex
@@ -44,6 +45,7 @@ fmt
 freerdp
 fuse2
 galculator
+gamescope
 gawk
 gcc
 gettext
@@ -51,6 +53,7 @@ gimp
 git
 git-lfs
 glew
+glibc
 gnome-chess
 gnome-keyring
 gnome-themes-extra
@@ -77,6 +80,7 @@ hunspell-es_mx
 imagemagick
 inkscape
 iptables-nft
+ipython
 iwd
 jq
 jre-openjdk
@@ -85,6 +89,8 @@ kicad-library
 kicad-library-3d
 kitty
 kwallet5
+lib32-glibc
+lib32-systemd
 libreoffice-fresh
 libtool
 libva-intel-driver
@@ -180,6 +186,7 @@ slim
 slim-themes
 spice-gtk
 sqlitebrowser
+steam
 strace
 sudo
 sxhkd
@@ -277,6 +284,7 @@ ttf-victor-mono-nerd
 tumbler
 ufw
 unrar
+unzip
 upower
 usbutils
 v4l2loopback-dkms
@@ -306,9 +314,12 @@ xf86-video-qxl
 xf86-video-vesa
 xf86-video-vmware
 xf86-video-voodoo
+xfce4-taskmanager
+xorg-server
 xorg-xev
 xorg-xhost
 xorg-xinit
 xorg-xrandr
 xournalpp
 yarn
+zip

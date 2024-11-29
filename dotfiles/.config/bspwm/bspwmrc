@@ -38,7 +38,10 @@ bspc config gapless_monocle       true
 bspc rule -a 'Gimp-2.10' desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a vlc state=floating
-bspc rule -a file-roller state=floating
+bspc rule -a Insync state=floating
+bspc rule -a Blueman-manager state=floating
+bspc rule -a Engrampa state=floating
+bspc rule -a Xarchiver state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a guvcview state=floating
 bspc rule -a NordPass state=floating
