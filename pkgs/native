@@ -1,3 +1,4 @@
+7zip
 acpilight
 alsa-utils
 android-file-transfer
@@ -6,7 +7,6 @@ archlinux-wallpaper
 aria2
 atril
 avahi
-aws-cli
 base
 base-devel
 bash-completion
@@ -59,6 +59,7 @@ guvcview
 gvfs
 hdf5
 hdparm
+hplip
 htop
 hunspell-es_any
 hunspell-es_mx
@@ -88,7 +89,7 @@ mtools
 neovim
 nethogs
 nmap
-nodejs-lts-hydrogen
+nodejs-lts-iron
 noto-fonts
 noto-fonts-extra
 npm
@@ -115,7 +116,6 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
-p7zip
 pacman-contrib
 parallel
 perl-json
@@ -149,6 +149,7 @@ reflector
 remmina
 ristretto
 rofi
+rpcbind
 rsync
 rust
 samba
@@ -188,6 +189,7 @@ thunar-media-tags-plugin
 thunar-volman
 tmux
 trash-cli
+tree
 ttf-0xproto-nerd
 ttf-3270-nerd
 ttf-agave-nerd
@@ -253,6 +255,7 @@ tumbler
 ufw
 unrar
 upower
+usb_modeswitch
 usbutils
 v4l2loopback-dkms
 virt-install

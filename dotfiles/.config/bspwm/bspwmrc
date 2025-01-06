@@ -4,6 +4,8 @@
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 dbus-update-activation-environment --all
 
+#xrandr --output eDP1 --primary --mode 1920x1080 --rate 144.00 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --left-of eDP1
+
 feh --bg-fill ~/Pictures/wallpapers/cyberpunk.jpg
 
 # set keyboar layout to us int.
@@ -20,6 +22,7 @@ picom &
 xss-lock -- /usr/bin/slimlock &
 
 bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
+#bspc monitor HDMI-1-0 -d VI VII VIII IX X
 
 bspc config border_width          2
 bspc config window_gap            7

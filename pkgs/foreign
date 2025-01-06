@@ -1,4 +1,5 @@
 asusctl
+aws-cli-v2
 drawio-desktop-bin
 gdrive
 google-chrome
@@ -11,6 +12,7 @@ nordvpn-bin
 onedrive
 python37
 rog-control-center
+rustdesk-bin
 supergfxctl
 virtio-win
 visual-studio-code-bin
