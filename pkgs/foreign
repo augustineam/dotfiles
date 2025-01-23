@@ -1,5 +1,4 @@
 aws-cli-v2
-drawio-desktop-bin
 gdrive
 google-chrome
 google-cloud-cli
@@ -11,7 +10,6 @@ ngrok
 nordvpn-bin
 obs-backgroundremoval
 obs-stroke-glow-shadow
-proton
 python37
 rustdesk-bin
 virtio-win
