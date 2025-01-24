@@ -60,6 +60,9 @@ alias grep='grep --color=auto'
 
 eval "$(micromamba shell hook --shell bash)"
 
+source /opt/google-cloud-cli/completion.zsh.inc
+source /opt/google-cloud-cli/path.zsh.inc
+
 # pnpm
 export PNPM_HOME="/home/augus/.local/share/pnpm"
 case ":$PATH:" in

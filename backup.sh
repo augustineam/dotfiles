@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/zsh
 
 echo 'Copying dotfiles from ~/ to ./dotfiles'
 

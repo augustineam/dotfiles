@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
 # Terminate already running bar instances
 killall -q polybar
