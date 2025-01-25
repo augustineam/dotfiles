@@ -101,6 +101,7 @@ nvidia-prime
 nvidia-settings
 nvtop
 obs-studio
+ollama-cuda
 opencv
 openvpn
 os-prober
@@ -128,10 +129,14 @@ polkit-gnome
 polybar
 pv
 python
+python-build
 python-crcmod
 python-cryptography
 python-dnspython
+python-flit-core
+python-installer
 python-markdown
+python-wheel
 qemu-desktop
 qemu-docs
 qopenvpn
@@ -290,3 +295,4 @@ xorg-xinit
 xorg-xrandr
 xournalpp
 yarn
+zsh
