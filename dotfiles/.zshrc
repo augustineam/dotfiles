@@ -1,6 +1,6 @@
 # Source profile files
 source ~/.profile
-# source ~/.profile.secrets
+source ~/.profile.secrets
 
 backward-kill-dir () {
     local WORDCHARS=${WORDCHARS/\/}
