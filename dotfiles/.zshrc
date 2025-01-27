@@ -51,3 +51,5 @@ zstyle :compinstall filename '/home/augus/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+source /usr/bin/aws_zsh_completer.sh
