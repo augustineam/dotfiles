@@ -27,25 +27,36 @@ mkdir -p "$INPUT_FOLDER/train" "$INPUT_FOLDER/val"
 
 # Get total number of files
 cd "$INPUT_FOLDER"
-files=(*.(tif|tiff|bmp))
+files=(*.bmp(N))  # (N) flag makes it nullglob
+if [[ ${#files} -eq 0 ]]; then
+    echo "Error: No BMP files found in $INPUT_FOLDER"
+    exit 1
+fi
+
 total=${#files[@]}
 train_count=$(( total * TRAIN_PERCENTAGE / 100 ))
+val_count=$(( total - train_count ))
 
-# Shuffle files randomly and split them
-print -l $files | shuf | {
-    # Read first X% into train
-    head -n $train_count | while read file; do
-        mv "$file" train/
-        echo "Moved $file to train/"
-    done
-    
-    # Read remaining files into val
-    tail -n +$(( train_count + 1 )) | while read file; do
-        mv "$file" val/
-        echo "Moved $file to val/"
-    done
-}
+echo "Found $total files"
+echo "Will move $train_count files to train/"
+echo "Will move $val_count files to val/"
 
-echo "Split complete!"
+# Create shuffled array of files
+shuffled_files=(${(o)files})  # Create a copy
+shuffled_files=(${(R)shuffled_files})  # Shuffle it
+
+# Move files to train
+for ((i=1; i<=train_count; i++)); do
+    mv "${shuffled_files[i]}" train/
+    echo "Moved ${shuffled_files[i]} to train/"
+done
+
+# Move files to val
+for ((i=train_count+1; i<=total; i++)); do
+    mv "${shuffled_files[i]}" val/
+    echo "Moved ${shuffled_files[i]} to val/"
+done
+
+echo "\nSplit complete!"
 echo "Train set: $train_count files (${TRAIN_PERCENTAGE}%)"
-echo "Validation set: $(( total - train_count )) files ($((100 - TRAIN_PERCENTAGE))%)"
+echo "Validation set: $val_count files ($((100 - TRAIN_PERCENTAGE))%)"
