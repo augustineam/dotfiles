@@ -1,14 +1,15 @@
 #!/bin/zsh
 
 # Check if correct number of arguments is provided
-if [[ $# -ne 2 ]]; then
-    echo "Usage: $0 input_folder train_percentage"
-    echo "Example: $0 BMP 80"
+if [[ $# -ne 3 ]]; then
+    echo "Usage: $0 input_folder min_value max_value"
+    echo "Example: $0 raw_images 0 13000"
     exit 1
 fi
 
 INPUT_FOLDER=$1
-TRAIN_PERCENTAGE=$2
+MIN_VALUE=$2
+MAX_VALUE=$3
 
 # Check if input folder exists
 if [[ ! -d "$INPUT_FOLDER" ]]; then
@@ -16,36 +17,31 @@ if [[ ! -d "$INPUT_FOLDER" ]]; then
     exit 1
 fi
 
-# Check if percentage is valid
-if [[ $TRAIN_PERCENTAGE -lt 1 || $TRAIN_PERCENTAGE -gt 99 ]]; then
-    echo "Error: Train percentage must be between 1 and 99"
-    exit 1
-fi
+# Create BMP directory if it doesn't exist
+mkdir -p "${INPUT_FOLDER}/BMP"
 
-# Create train and val directories inside input folder if they don't exist
-mkdir -p "$INPUT_FOLDER/train" "$INPUT_FOLDER/val"
+# Process all TIFF files in specified directory
+for file in $INPUT_FOLDER/*.(tiff|tif); do
+    # Check if file exists and is a regular file
+    if [[ -f "$file" ]]; then
+        # Get filename without extension
+        basename="${file:t:r}"
+        
+        # Convert 16-bit TIFF to 8-bit BMP
+        magick "$file" \
+            -depth 16 \
+            -colorspace gray \
+            -auto-level \
+            -contrast-stretch "${MIN_VALUE}x${MAX_VALUE}" \
+            -depth 8 \
+            PGM:- | \
+        magick - \
+            -colorspace gray \
+            -type grayscale \
+            "BMP3:${INPUT_FOLDER}/BMP/${basename}.bmp"
+                        
+        echo "Converted $file to ${INPUT_FOLDER}/BMP/${basename}.bmp"
+    fi
+done
 
-# Get total number of files
-cd "$INPUT_FOLDER"
-files=(*.(tif|tiff|bmp))
-total=${#files[@]}
-train_count=$(( total * TRAIN_PERCENTAGE / 100 ))
-
-# Shuffle files randomly and split them
-print -l $files | shuf | {
-    # Read first X% into train
-    head -n $train_count | while read file; do
-        mv "$file" train/
-        echo "Moved $file to train/"
-    done
-    
-    # Read remaining files into val
-    tail -n +$(( train_count + 1 )) | while read file; do
-        mv "$file" val/
-        echo "Moved $file to val/"
-    done
-}
-
-echo "Split complete!"
-echo "Train set: $train_count files (${TRAIN_PERCENTAGE}%)"
-echo "Validation set: $(( total - train_count )) files ($((100 - TRAIN_PERCENTAGE))%)"
+echo "Conversion complete!"
