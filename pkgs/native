@@ -41,12 +41,12 @@ feh
 file
 findutils
 flameshot
+flatbuffers
 flex
 fmt
 freerdp
 fuse2
 galculator
-gamescope
 gawk
 gcc
 gettext
@@ -91,7 +91,6 @@ kicad-library-3d
 kitty
 kwallet5
 lib32-glibc
-lib32-systemd
 libreoffice-fresh
 libtool
 libva-intel-driver
@@ -117,6 +116,7 @@ nethogs
 nmap
 nodejs-lts-iron
 noto-fonts
+noto-fonts-emoji
 noto-fonts-extra
 npm
 ntfs-3g
@@ -128,6 +128,7 @@ obs-studio
 ollama-cuda
 opencv
 openvpn
+os-prober
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -155,6 +156,7 @@ pipewire-session-manager
 pkgconf
 polkit-gnome
 polybar
+postgresql
 pv
 python
 python-build
@@ -194,7 +196,6 @@ slim
 slim-themes
 spice-gtk
 sqlitebrowser
-steam
 strace
 sudo
 sxhkd
@@ -302,6 +303,7 @@ virt-manager
 vlc
 vtk
 webkit2gtk-4.1
+webp-pixbuf-loader
 wget
 which
 xclip
@@ -330,6 +332,7 @@ xorg-xhost
 xorg-xinit
 xorg-xrandr
 xournalpp
+xss-lock
 zip
 zsh
 zsh-completions

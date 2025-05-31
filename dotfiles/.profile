@@ -57,6 +57,7 @@ parse_git_dirty() {
 }
 
 alias grep='grep --color=auto'
+alias dataconnect='curl -sL https://firebase.tools/dataconnect | bash'
 
 eval "$(micromamba shell hook --shell bash)"
 
@@ -64,6 +65,13 @@ source /opt/google-cloud-cli/completion.zsh.inc
 source /opt/google-cloud-cli/path.zsh.inc
 
 appendpath /home/augus/.local/share/scripts
+appendpath /home/augus/.local/bin
+
+# Loading `.env` on VS Code embeded terminal
+if [[ "$TERM_PROGRAM" == "vscode" && -f ".env" ]]; then
+  source .env && \
+  echo "✅ loaded .env"
+fi
 
 # pnpm
 export PNPM_HOME="/home/augus/.local/share/pnpm"

@@ -29,10 +29,10 @@ setxkbmap us -variant intl
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Start compositor
-picom &
+pgrep -x picom > /dev/null || picom &
 
 # Start screen locker
-xss-lock -- /usr/bin/slimlock &
+pgrep -x xss-lock > /dev/null || xss-lock --transfer-sleep-lock -- /usr/bin/slimlock &
 
 # Configure workspaces for each monitor
 bspc monitor DP-0 -d I II III IV V
