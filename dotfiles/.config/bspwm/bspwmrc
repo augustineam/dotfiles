@@ -23,10 +23,17 @@ feh --bg-fill ~/Pictures/wallpapers/cyberpunk.jpg
 setxkbmap us -variant intl
 
 # Set Synaptic configuration
-xinput set-prop 11 "Synaptics Tap Action" 1, 2, 3, 0, 1, 3, 2
-xinput set-prop 11 "Synaptics Click Action" 1, 3, 2
-xinput set-prop 11 "Synaptics Palm Detection" 1
-xinput set-prop 11 "Synaptics Palm Dimensions" 10, 200
+xinput set-prop 11 "Synaptics Two-Finger Scrolling" 1, 1
+xinput set-prop 11 "Synaptics Edge Scrolling" 0, 0, 0
+xinput set-prop 11 "Synaptics Tap Action" 0, 3, 0, 1, 1, 0, 0
+xinput set-prop 11 "Synaptics Click Action" 1, 3, 2 
+
+# Victus Laptop does not support palm detection nor pressure detection
+#xinput set-prop 11 "Synaptics Palm Detection" 1
+#xinput set-prop 11 "Synaptics Palm Dimensions" 10, 200
+
+# Lets use syndaemon to disable tapping and scrolling (-t) while typing
+pgrep -x syndaemon > /dev/null || syndaemon -i 1 -t -K -R -d
 
 # Start polkit authentication agent
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
