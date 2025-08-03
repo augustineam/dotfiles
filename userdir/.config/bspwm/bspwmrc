@@ -8,7 +8,7 @@ dbus-update-activation-environment --all
 # Configure dual monitor setup 
 # Primary monitor: DP-0 (ultrawide)
 # Secondary monitor: HDMI-0 (standard)
-xrandr --output eDP1 --primary --mode 1920x1080 --rate 60 --rotate normal # --output HDMI-0 --mode 1920x1200 --rate 75 --rotate normal --right-of DP-0
+xrandr --output eDP-1 --primary --mode 1920x1080 --rate 60 --rotate normal # --output HDMI-0 --mode 1920x1200 --rate 75 --rotate normal --right-of DP-0
 
 # Wacom tablet configuration
 WACOM='Wacom Intuos S Pen stylus'
@@ -48,7 +48,7 @@ pgrep -x picom > /dev/null || picom &
 pgrep -x xss-lock > /dev/null || xss-lock --transfer-sleep-lock -- /usr/bin/slimlock &
 
 # Configure workspaces for each monitor
-bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
+bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
 
 # Configure bspwm appearance
 bspc config border_width          2

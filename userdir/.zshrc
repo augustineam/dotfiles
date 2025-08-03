@@ -53,3 +53,25 @@ compinit
 # End of lines added by compinstall
 
 source /usr/bin/aws_zsh_completer.sh
+
+nvidia_run() {
+    __NV_PRIME_RENDER_OFFLOAD=1 \
+    __GLX_VENDOR_LIBRARY_NAME=nvidia \
+    __VK_LAYER_NV_optimus=1 \
+    "$@"
+}
+
+alias nvrun='nvidia_run'
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/usr/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/augus/.mamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<

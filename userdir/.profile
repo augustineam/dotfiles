@@ -56,9 +56,10 @@ parse_git_dirty() {
     fi
 }
 
+alias ls='ls --color'
 alias grep='grep --color=auto'
-
-eval "$(micromamba shell hook --shell bash)"
+alias activate='micromamba activate'
+alias deactivate='micromamba deactivate'
 
 source /opt/google-cloud-cli/completion.zsh.inc
 source /opt/google-cloud-cli/path.zsh.inc
@@ -72,3 +73,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+

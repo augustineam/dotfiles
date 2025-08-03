@@ -67,6 +67,7 @@ hunspell-es_any
 hunspell-es_mx
 imagemagick
 inkscape
+intel-media-driver
 iptables-nft
 ipython
 iw
@@ -91,6 +92,7 @@ lxappearance
 man-db
 mariadb
 mencoder
+mesa-utils
 meson
 metasploit
 miniserve
@@ -107,6 +109,7 @@ npm
 ntfs-3g
 nvidia
 nvidia-container-toolkit
+nvidia-prime
 nvidia-settings
 nvtop
 obs-studio
@@ -279,6 +282,7 @@ virt-install
 virt-manager
 vlc
 vtk
+vulkan-intel
 webkit2gtk-4.1
 wget
 xclip
@@ -290,16 +294,7 @@ xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-void
 xf86-input-wacom
-xf86-video-amdgpu
-xf86-video-ati
-xf86-video-dummy
-xf86-video-fbdev
 xf86-video-intel
-xf86-video-nouveau
-xf86-video-qxl
-xf86-video-vesa
-xf86-video-vmware
-xf86-video-voodoo
 xfce4-taskmanager
 xorg-server
 xorg-xev
