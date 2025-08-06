@@ -1,0 +1,8 @@
+[Match]
+Name=enp*
+
+[Link]
+RequiredForOnline=routable
+
+[Network]
+DHCP=yes

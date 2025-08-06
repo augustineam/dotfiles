@@ -6,15 +6,15 @@
 dbus-update-activation-environment --all
 
 # Configure dual monitor setup 
-# Primary monitor: DP-0 (ultrawide)
-# Secondary monitor: HDMI-0 (standard)
-xrandr --output DP-0 --primary --mode 3440x1440 --rate 144 --rotate normal --output HDMI-0 --mode 1920x1200 --rate 75 --rotate normal --right-of DP-0
+# Primary monitor: DisplayPort-0 (ultrawide)
+# Secondary monitor: HDMI-A-0 (standard)
+xrandr --output DisplayPort-0 --primary --mode 3440x1440 --rate 144 --rotate normal --output HDMI-A-0 --mode 1920x1200 --rate 75 --rotate right --right-of DisplayPort-0
 
 # Wacom tablet configuration
 WACOM='Wacom Intuos S Pen stylus'
 
 # Map Wacom tablet to secondary monitor if device is present
-(xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" MapToOutput 1920x1200+3440+0
+(xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" Rotate ccw && xsetwacom set "$WACOM" MapToOutput 1200x1920+3440+0
 
 # Set wallpaper
 feh --bg-fill ~/Pictures/wallpapers/cyberpunk.jpg
@@ -35,8 +35,8 @@ pgrep -x picom > /dev/null || picom &
 pgrep -x xss-lock > /dev/null || xss-lock --transfer-sleep-lock -- /usr/bin/slimlock &
 
 # Configure workspaces for each monitor
-bspc monitor DP-0 -d I II III IV V
-bspc monitor HDMI-0 -d VI VII VIII IX X
+bspc monitor DisplayPort-0 -d I II III IV V
+bspc monitor HDMI-A-0 -d VI VII VIII IX X
 
 # Configure bspwm appearance
 bspc config border_width          2

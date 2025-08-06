@@ -56,16 +56,17 @@ parse_git_dirty() {
     fi
 }
 
+alias ls='ls --color'
 alias grep='grep --color=auto'
 alias dataconnect='curl -sL https://firebase.tools/dataconnect | bash'
-
-eval "$(micromamba shell hook --shell bash)"
+alias activate='micromamba activate'
+alias deactivate='micromamba deactivate'
 
 source /opt/google-cloud-cli/completion.zsh.inc
 source /opt/google-cloud-cli/path.zsh.inc
 
-appendpath /home/augus/.local/share/scripts
-appendpath /home/augus/.local/bin
+appendpath $HOME/.local/share/scripts
+appendpath $HOME/.local/bin
 
 # Loading `.env` on VS Code embeded terminal
 if [[ "$TERM_PROGRAM" == "vscode" && -f ".env" ]]; then
@@ -80,3 +81,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
