@@ -8,13 +8,14 @@ dbus-update-activation-environment --all
 # Configure dual monitor setup 
 # Primary monitor: DisplayPort-0 (ultrawide)
 # Secondary monitor: HDMI-A-0 (standard)
-xrandr --output DisplayPort-0 --primary --mode 3440x1440 --rate 144 --rotate normal --output HDMI-A-0 --mode 1920x1200 --rate 75 --rotate right --right-of DisplayPort-0
+xrandr --output DisplayPort-0 --primary --mode 3440x1440 --rate 144 --rotate normal --output HDMI-A-0 --mode 1920x1200 --rate 75 --rotate normal --right-of DisplayPort-0
 
 # Wacom tablet configuration
 WACOM='Wacom Intuos S Pen stylus'
 
 # Map Wacom tablet to secondary monitor if device is present
-(xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" Rotate ccw && xsetwacom set "$WACOM" MapToOutput 1200x1920+3440+0
+# (xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" Rotate ccw && xsetwacom set "$WACOM" MapToOutput 1200x1920+3440+0
+(xsetwacom list devices | grep "$WACOM" > /dev/null) && xsetwacom set "$WACOM" MapToOutput 1920x1200+3440+0
 
 # Set wallpaper
 feh --bg-fill ~/Pictures/wallpapers/cyberpunk.jpg

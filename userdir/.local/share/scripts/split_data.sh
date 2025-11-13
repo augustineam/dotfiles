@@ -27,7 +27,7 @@ mkdir -p "$INPUT_FOLDER/train" "$INPUT_FOLDER/val"
 
 # Get total number of files
 cd "$INPUT_FOLDER"
-files=(*.bmp(N))  # (N) flag makes it nullglob
+files=(*.tiff(N))  # (N) flag makes it nullglob
 if [[ ${#files} -eq 0 ]]; then
     echo "Error: No BMP files found in $INPUT_FOLDER"
     exit 1

@@ -59,8 +59,8 @@ parse_git_dirty() {
 alias ls='ls --color'
 alias grep='grep --color=auto'
 alias dataconnect='curl -sL https://firebase.tools/dataconnect | bash'
-alias activate='micromamba activate'
-alias deactivate='micromamba deactivate'
+# alias activate='micromamba activate'
+# alias deactivate='micromamba deactivate'
 
 source /opt/google-cloud-cli/completion.zsh.inc
 source /opt/google-cloud-cli/path.zsh.inc
