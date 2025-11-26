@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount WDEX4100 NAS
+After=network-online.target
+Wants=network-online.target
+
+[Mount]
+What=192.168.3.202:/mnt/HD/HD_a2/aavila
+Where=/home/augus/WDMyCloudEX4100
+Options=vers=3,soft,timeo=30,retrans=3
+Type=nfs
+TimeoutSec=30
+
+[Install]
+WantedBy=remote-fs.target
