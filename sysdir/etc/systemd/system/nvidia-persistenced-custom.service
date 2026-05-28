@@ -1,0 +1,13 @@
+[Unit]
+Description=NVIDIA Persistence Daemon
+After=local-fs.target
+Before=graphical.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/nvidia-persistenced --user root --persistence-mode
+ExecStopPost=/usr/bin/nvidia-persistenced --user root --no-persistence-mode
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

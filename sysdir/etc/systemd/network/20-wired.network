@@ -1,8 +1,20 @@
 [Match]
 Name=enp*
+#Name=enp12s0
 
 [Link]
 RequiredForOnline=routable
 
 [Network]
 DHCP=yes
+KeepConfiguration=yes
+
+#DHCP=no
+#Address=192.168.3.201/24
+#Gateway=192.168.3.1
+#DNS=1.1.1.1
+
+
+[DHCPv4]
+ClientIdentifier=mac
+SendRelease=yes

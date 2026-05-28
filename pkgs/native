@@ -1,9 +1,9 @@
 7zip
 amdgpu_top
-archlinux-themes-slim
 archlinux-wallpaper
 base
 base-devel
+bc
 bind
 blueman
 bluez
@@ -37,7 +37,7 @@ gnome-themes-extra
 gparted
 graphviz
 grub
-gst-plugin-mp4
+gst-plugin-isobmff
 gst-plugin-mpegtslive
 gst-plugin-va
 gst-plugins-bad
@@ -49,7 +49,9 @@ hunspell-en_gb
 hunspell-en_us
 hunspell-es_mx
 imagemagick
+inkscape
 iwd
+jq
 jre-openjdk
 kitty
 less
@@ -57,10 +59,12 @@ libreoffice-fresh
 libreoffice-fresh-es
 linux
 linux-firmware
+linux-headers
 lxappearance
 mariadb-lts
 mate-calc
 mesa-utils
+mosh
 mousepad
 neovim
 nfs-utils
@@ -76,6 +80,8 @@ nvidia-prime
 nvidia-settings
 nvtop
 obs-studio
+obsidian
+onnxruntime-cpu
 opencv
 os-prober
 otf-aurulent-nerd
@@ -90,6 +96,8 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+patchelf
+peek
 picom
 pipewire-audio
 pipewire-pulse
@@ -99,7 +107,9 @@ polybar
 qt6-base
 qt6-charts
 qt6-doc
+qt6-examples
 qt6-graphs
+qt6-httpserver
 qt6-imageformats
 qt6-languageserver
 qt6-multimedia
@@ -121,8 +131,7 @@ rofi
 rpcbind
 rsync
 sane
-slim
-slim-themes
+sddm
 sniffnet
 sqlitebrowser
 sxhkd
@@ -138,6 +147,7 @@ texlive-fontutils
 texlive-formatsextra
 texlive-games
 texlive-humanities
+texlive-langspanish
 texlive-latex
 texlive-latexextra
 texlive-latexrecommended
@@ -225,13 +235,12 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 ufw
+unrar
 unzip
 usb_modeswitch
 usbutils
 uv
-vlc-plugin-ffmpeg
-vlc-plugin-mpeg2
-vlc-plugin-x265
+valgrind
 webp-pixbuf-loader
 wget
 wireplumber
