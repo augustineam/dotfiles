@@ -61,6 +61,8 @@ linux
 linux-firmware
 linux-headers
 lxappearance
+ly
+man-db
 mariadb-lts
 mate-calc
 mesa-utils
@@ -131,7 +133,6 @@ rofi
 rpcbind
 rsync
 sane
-sddm
 sniffnet
 sqlitebrowser
 sxhkd

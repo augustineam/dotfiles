@@ -33,7 +33,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom &
 
 # Start screen locker
-pgrep -x xss-lock > /dev/null || xss-lock --transfer-sleep-lock -- /usr/bin/slimlock &
+pgrep -x xss-lock > /dev/null || xss-lock --transfer-sleep-lock -- ~/.local/share/scripts/lock.sh &
 
 # Configure workspaces for each monitor
 bspc monitor DisplayPort-0 -d I II III IV V VI VII VIII IX X
